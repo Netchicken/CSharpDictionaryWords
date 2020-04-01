@@ -11,6 +11,7 @@ namespace CSharpDictionaryWords
         public Form1()
         {
             InitializeComponent();
+            operations.LoadDictionaryFile();
         }
 
         private void BtnLoadWords_Click(object sender, EventArgs e)

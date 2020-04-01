@@ -4,7 +4,7 @@ using System.IO;
 
 namespace CSharpDictionaryWords
 {
-    class Operations
+    public class Operations
     {
         //fields
 
@@ -14,6 +14,23 @@ namespace CSharpDictionaryWords
         //properties
         // public Dictionary<string, string> DictionaryWords { get; set; }
         public string SearchWord { get; set; }
+        // public string DictionaryName { get; set; } = "dict1.txt";
+
+        public string LoadDictionaryFile()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string FileName = string.Format("{0}Resources\\dict1.txt", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+
+
+            if (File.Exists(FileName))
+            {
+                return FileName;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         //methods
         public void LoadDictionary()
@@ -25,9 +42,10 @@ namespace CSharpDictionaryWords
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
             string FileName = string.Format("{0}Resources\\dict1.txt", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
 
-            foreach (var word in File.ReadLines(FileName))
-            {
 
+
+            foreach (var word in File.ReadLines(LoadDictionaryFile()))
+            {
                 //if the word is not in the dictionary then add it
                 if (DictionaryWords.ContainsKey(word) == false)
                 {
@@ -35,10 +53,12 @@ namespace CSharpDictionaryWords
                 }
             }
         }
+
+
         //pure method for UNit Test
         public string RunSearch(Dictionary<string, string> Dict, string Search)
         {
-            if (Dict.ContainsKey(Search))
+            if (Dict.ContainsKey(Search.ToLower()))
             {
                 return " is found";
             }
