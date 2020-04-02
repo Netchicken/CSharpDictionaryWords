@@ -53,11 +53,11 @@ namespace CSharpDictionaryWordUnitTest
         public void LoadDictionaryFileTest()
         {
             //C:\\Dropbox\\C# Lessons 2020\\CSharpDictionaryWords\\CSharpDictionaryWordUnitTest\\Resources\\dict1.txt
-            string expected = @"C:\\Dropbox\\C# Lessons 2020\\CSharpDictionaryWords\\CSharpDictionaryWordUnitTest\\Resources\\dict1.txt";
+            //   string expected = @"C:\\Dropbox\\C# Lessons 2020\\CSharpDictionaryWords\\CSharpDictionaryWordUnitTest\\Resources\\dict1.txt";
 
             string actual = operations.LoadDictionaryFile();
 
-            string actual2 = actual.Replace("CSharpDictionaryWords", "CSharpDictionaryWords\\CSharpDictionaryWordUnitTest");
+            //   string actual2 = actual.Replace("CSharpDictionaryWords", "CSharpDictionaryWords\\CSharpDictionaryWordUnitTest");
 
             Assert.IsNotNull(actual);
 

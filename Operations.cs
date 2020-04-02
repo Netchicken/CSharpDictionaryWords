@@ -39,17 +39,20 @@ namespace CSharpDictionaryWords
 
             //'C:\Dropbox\C# Lessons 2020\CSharpDictionaryWords\Resource1\dict1.txt'.'
             //C:\Dropbox\C# Lessons 2020\CSharpDictionaryWords\Resources
-            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-            string FileName = string.Format("{0}Resources\\dict1.txt", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            //     string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            //     string FileName = string.Format("{0}Resources\\dict1.txt", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
 
+            string Filename = LoadDictionaryFile();
 
-
-            foreach (var word in File.ReadLines(LoadDictionaryFile()))
+            if (!String.IsNullOrEmpty(Filename))
             {
-                //if the word is not in the dictionary then add it
-                if (DictionaryWords.ContainsKey(word) == false)
+                foreach (var word in File.ReadLines(Filename))
                 {
-                    DictionaryWords.Add(word, word);
+                    //if the word is not in the dictionary then add it
+                    if (DictionaryWords.ContainsKey(word) == false)
+                    {
+                        DictionaryWords.Add(word, word);
+                    }
                 }
             }
         }
