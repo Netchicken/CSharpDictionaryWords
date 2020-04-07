@@ -133,5 +133,25 @@ namespace CSharpDictionaryWords {
                 return ResourceManager.GetString("dict1", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dictImage {
+            get {
+                object obj = ResourceManager.GetObject("dictImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap randomDudeOnZoom {
+            get {
+                object obj = ResourceManager.GetObject("randomDudeOnZoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -92,5 +92,11 @@
   <ItemGroup>
     <None Include="Resources\dict1.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dictImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\randomDudeOnZoom.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

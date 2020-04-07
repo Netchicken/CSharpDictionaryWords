@@ -32,6 +32,8 @@
             this.txtEnterWord = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lbxAnswer = new System.Windows.Forms.ListBox();
+            this.pbxDict = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDict)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnLoadWords
@@ -71,17 +73,32 @@
             this.lbxAnswer.Size = new System.Drawing.Size(179, 212);
             this.lbxAnswer.TabIndex = 3;
             // 
+            // pbxDict
+            // 
+            this.pbxDict.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pbxDict.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxDict.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbxDict.Image = global::CSharpDictionaryWords.Resource1.dictImage;
+            this.pbxDict.Location = new System.Drawing.Point(0, 0);
+            this.pbxDict.Name = "pbxDict";
+            this.pbxDict.Size = new System.Drawing.Size(422, 280);
+            this.pbxDict.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxDict.TabIndex = 4;
+            this.pbxDict.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 283);
+            this.ClientSize = new System.Drawing.Size(422, 280);
             this.Controls.Add(this.lbxAnswer);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtEnterWord);
             this.Controls.Add(this.BtnLoadWords);
+            this.Controls.Add(this.pbxDict);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDict)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,6 +110,7 @@
         private System.Windows.Forms.TextBox txtEnterWord;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListBox lbxAnswer;
+        private System.Windows.Forms.PictureBox pbxDict;
     }
 }
 

@@ -22,6 +22,10 @@ namespace CSharpDictionaryWords
             this.Text = operations.DictionaryWords.Count.ToString();
 
             btnSearch.Enabled = true;
+
+            pbxDict.Image = Resource1.randomDudeOnZoom;
+
+
         }
 
         #region Old Load words code OK to delete
